@@ -41,7 +41,7 @@ Aviation safety and dispatch decisions rely heavily on **METAR** (Meteorological
 | **Evaluation & Plotting** | `Matplotlib` `Seaborn` | Actual vs. predicted error curves and confusion matrices |
 | **Testing** | `Pytest` | Edge-case unit tests for malformed METAR strings |
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Python 3.10 or higher
@@ -67,3 +67,56 @@ venv\Scripts\activate.bat
 # Install dependencies
 pip install -r requirements.txt
 
+### 2. Quick Usage (Run Decoder)
+
+Run the interactive terminal decoder to fetch and parse live METAR data by ICAO code:
+
+```bash
+python metar_py2.py
+
+Enter airport ICAO code (e.g., VABB, VIDP, KJFK): VABB
+
+Fetching METAR for VABB...
+
+--- RAW METAR ---
+METAR VABB 270530Z 29008KT 4000 HZ FEW020 SCT025 31/23 Q1011 NOSIG
+
+--- DECODED OUTPUT ---
+METAR for Chhatrapati Shivaji Maharaj International Airport, Mumbai
+reported on day 27 at 05:30 Zulu.
+wind blowing from 290 degrees at 8 knots.
+visibility of 4000 meters. present weather: haze.
+clouds: few clouds at 2,000 feet, scattered clouds at 2,500 feet.
+temperature of 31°C with a dew point of 23°C.
+altimeter setting of 1011 hPa
+
+
+## 🗺️ Roadmap & Current Status
+This repository is under active development. Below is the phased engineering roadmap:
+
+## 🗺️ Roadmap & Current Status
+
+This repository is under active development. Below is the phased engineering roadmap:
+
+| Phase | Milestone / Task | Status |
+| :--- | :--- | :---: |
+| **Phase 1: Deterministic METAR Decoder** | Live retrieval of raw METAR strings by ICAO identifier | ![Completed](https://img.shields.io/badge/Completed-brightgreen?style=flat-square) |
+| | Tokenizer for wind, visibility, weather phenomena, clouds, temp/dew point, and QNH | ![Completed](https://img.shields.io/badge/Completed-brightgreen?style=flat-square) |
+| | Natural language output generator for human-readable summaries | ![Completed](https://img.shields.io/badge/Completed-brightgreen?style=flat-square) |
+| **Phase 2: Feature Engineering & Preprocessing** | Parse reports into tabular time-series format (`pandas`) | ![Completed](https://img.shields.io/badge/Completed-brightgreen?style=flat-square) |
+| | Transform wind speed/direction into continuous $u$ and $v$ vectors | ![Pending](https://img.shields.io/badge/Pending-lightgrey?style=flat-square) |
+| | Generate rolling lag features ($t-1$, $t-2$, hourly deltas) | ![Pending](https://img.shields.io/badge/Pending-lightgrey?style=flat-square) |
+| **Phase 3: ML Weather Nowcasting ($t+1$)** | Baseline persistence model benchmark | ![Pending](https://img.shields.io/badge/Pending-lightgrey?style=flat-square) |
+| | Train XGBoost / Random Forest regressors for next-step temperature and dew point | ![Pending](https://img.shields.io/badge/Pending-lightgrey?style=flat-square) |
+| | Build flight category transition classifier (VFR / MVFR / IFR / LIFR) | ![Pending](https://img.shields.io/badge/Pending-lightgrey?style=flat-square) |
+| | Model evaluation using MAE, RMSE, and confusion matrices | ![Pending](https://img.shields.io/badge/Pending-lightgrey?style=flat-square) |
+| **Phase 4: Dashboard & Deployment** | Streamlit web app showing live airport conditions and forecasted trends | ![Pending](https://img.shields.io/badge/Pending-lightgrey?style=flat-square) |
+
+---
+
+## 🤝 Author & Contact
+
+Developed by **[Your Name]**
+
+[![GitHub](https://img.shields.io/badge/GitHub-@codewithsohi-181717?style=flat-square&logo=github)](https://github.com/codewithsohi)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/YOUR_LINKEDIN_USERNAME)
