@@ -89,34 +89,24 @@ visibility of 4000 meters. present weather: haze.
 clouds: few clouds at 2,000 feet, scattered clouds at 2,500 feet.
 temperature of 31°C with a dew point of 23°C.
 altimeter setting of 1011 hPa
+```
 
-
-## 🗺️ Roadmap & Current Status
-This repository is under active development. Below is the phased engineering roadmap:
-
-## 🗺️ Roadmap & Current Status
+## Roadmap & Current Status
 
 This repository is under active development. Below is the phased engineering roadmap:
 
-| Phase | Milestone / Task | Status |
+| Phase | Key Deliverables & Features | Status |
 | :--- | :--- | :---: |
-| **Phase 1: Deterministic METAR Decoder** | Live retrieval of raw METAR strings by ICAO identifier | ![Completed](https://img.shields.io/badge/Completed-brightgreen?style=flat-square) |
-| | Tokenizer for wind, visibility, weather phenomena, clouds, temp/dew point, and QNH | ![Completed](https://img.shields.io/badge/Completed-brightgreen?style=flat-square) |
-| | Natural language output generator for human-readable summaries | ![Completed](https://img.shields.io/badge/Completed-brightgreen?style=flat-square) |
-| **Phase 2: Feature Engineering & Preprocessing** | Parse reports into tabular time-series format (`pandas`) | ![Completed](https://img.shields.io/badge/Completed-brightgreen?style=flat-square) |
-| | Transform wind speed/direction into continuous $u$ and $v$ vectors | ![Pending](https://img.shields.io/badge/Pending-lightgrey?style=flat-square) |
-| | Generate rolling lag features ($t-1$, $t-2$, hourly deltas) | ![Pending](https://img.shields.io/badge/Pending-lightgrey?style=flat-square) |
-| **Phase 3: ML Weather Nowcasting ($t+1$)** | Baseline persistence model benchmark | ![Pending](https://img.shields.io/badge/Pending-lightgrey?style=flat-square) |
-| | Train XGBoost / Random Forest regressors for next-step temperature and dew point | ![Pending](https://img.shields.io/badge/Pending-lightgrey?style=flat-square) |
-| | Build flight category transition classifier (VFR / MVFR / IFR / LIFR) | ![Pending](https://img.shields.io/badge/Pending-lightgrey?style=flat-square) |
-| | Model evaluation using MAE, RMSE, and confusion matrices | ![Pending](https://img.shields.io/badge/Pending-lightgrey?style=flat-square) |
-| **Phase 4: Dashboard & Deployment** | Streamlit web app showing live airport conditions and forecasted trends | ![Pending](https://img.shields.io/badge/Pending-lightgrey?style=flat-square) |
+| **Phase 1: Deterministic METAR Decoder** | • Live retrieval of raw METAR strings by ICAO identifier<br>• Tokenizer for wind, visibility, weather phenomena, clouds, temp/dew point, QNH<br>• Natural language output generator for human-readable summaries | `Completed` |
+| **Phase 2: Feature Engineering & Preprocessing** | • Parse reports into tabular time-series format (`Pandas`)<br>• Transform wind speed/direction into continuous `u` and `v` vectors<br>• Generate rolling lag features (`t-1`, `t-2`, hourly deltas) | `In Progress` |
+| **Phase 3: Machine Learning Weather Nowcasting** | • Baseline persistence model benchmark<br>• Train XGBoost / Random Forest regressors for next-step temp & dew point<br>• Build flight category transition classifier (`VFR` / `MVFR` / `IFR` / `LIFR`)<br>• Model evaluation using MAE, RMSE, and confusion matrices | `Planned` |
+| **Phase 4: Dashboard & Deployment** | • Streamlit web app showing live airport conditions and forecasted trends | `Planned` |
 
 ---
 
-## 🤝 Author & Contact
+## Contact & Author
 
-Developed by **[Your Name]**
+Developed by **[Sohi Kulkarni]**
+* **GitHub:** [@codewithsohi](https://github.com/codewithsohi)
+* **LinkedIn:** [https://www.linkedin.com/in/sohi-kulkarni/](#)
 
-[![GitHub](https://img.shields.io/badge/GitHub-@codewithsohi-181717?style=flat-square&logo=github)](https://github.com/codewithsohi)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/YOUR_LINKEDIN_USERNAME)
