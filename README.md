@@ -66,7 +66,7 @@ venv\Scripts\activate.bat
 
 # Install dependencies
 pip install -r requirements.txt
-
+```
 ### 2. Quick Usage (Run Decoder)
 
 Run the interactive terminal decoder to fetch and parse live METAR data by ICAO code:
@@ -106,7 +106,7 @@ This repository is under active development. Below is the phased engineering roa
 
 ## Contact & Author
 
-Developed by **[Sohi Kulkarni]**
+Developed by **Sohi Kulkarni**
 * **GitHub:** [@codewithsohi](https://github.com/codewithsohi)
 * **LinkedIn:** [https://www.linkedin.com/in/sohi-kulkarni/](#)
 
