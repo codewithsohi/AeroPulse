@@ -41,4 +41,29 @@ Aviation safety and dispatch decisions rely heavily on **METAR** (Meteorological
 | **Evaluation & Plotting** | `Matplotlib` `Seaborn` | Actual vs. predicted error curves and confusion matrices |
 | **Testing** | `Pytest` | Edge-case unit tests for malformed METAR strings |
 
+## 🚀 Getting Started
+
+### Prerequisites
+- Python 3.10 or higher
+- Git
+
+### 1. Clone & Set Up Virtual Environment
+
+```bash
+# Clone the repository
+git clone [https://github.com/codewithsohi/AeroPulse.git](https://github.com/codewithsohi/AeroPulse.git)
+cd AeroPulse
+
+# Create and activate a virtual environment
+python -m venv venv
+
+# On macOS/Linux:
+source venv/bin/activate
+# On Windows (PowerShell):
+venv\Scripts\Activate.ps1
+# On Windows (Command Prompt):
+venv\Scripts\activate.bat
+
+# Install dependencies
+pip install -r requirements.txt
 
