@@ -217,3 +217,10 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 metar.py
+
+# AeroPulse ML Artifacts & Datasets
+data/raw/*.csv
+data/processed/*.csv
+models/*.json
+models/*.joblib
+*.png
