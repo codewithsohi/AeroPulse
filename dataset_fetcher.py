@@ -40,5 +40,7 @@ def download_historical_metars(
     return out_file
 
 if __name__ == "__main__":
-    # Example: Download 3 years of data for KJFK (JFK New York) or VIDP (Delhi)
-    download_historical_metars("KJFK", start_year=2021, end_year=2023)
+    stations = ["KJFK", "VIDP", "EGLL"]
+    print(f"[*] Starting download of historical METARs for stations: {stations}")
+    for station in stations:
+        download_historical_metars(station, start_year=2023, end_year=2023)
